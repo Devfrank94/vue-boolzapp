@@ -65,20 +65,18 @@ body{
 }
 
 .top-bar{
-  height: 8%;
-  min-height: 68px;
+  height: 68px;
   background-color: #EAEAEA;
 }
 
 .main-chat{
-  height: calc(100% - 15%);
+  height: calc(100% - 128px);
   background-image: url(../img/mine.jpg);
   overflow-y: scroll;
 }
 
 .foot-chat{
-  height: 7%;
-  min-height: 60px;
+  height: 60px;
   background-color: #F3EEEA;
 }
 
@@ -133,13 +131,59 @@ body{
   text-decoration: underline;
 }
 
+.utility-search .search-bar{
+  background-color: #F9F9F9;
+  height: 53px;
+}
 
+.utility-search .search-bar input{
+  padding: 11px 15px;
+  width: 100%;
+  border: none;
+  margin-right: 5px;
+  color: gray;
+  font-weight: 600;
+  font-size: .7rem;
+}
 
+.utility-search .search-bar i{
+  padding: 10px 15px;
+  margin-left: 5px;
+  margin-right: .5px;
+  background-color: white;
+  color: #B1B1B1;
+}
 
+.list-contact {
+  height: calc(100% - 201px);
+  overflow-y: scroll;
+}
 
+.list-contact li:hover {
+  background-color: lightgrey;
+  transition: all .5s;
+}
 
+.list-contact li {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+  padding: 15px 5px;  
+  
+}
 
+.aside ul .info-user{
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: .8rem;
+}
 
+.aside ul .info-user .last-message{
+  font-weight: 500;
+  font-size: .7rem;
+  color: grey;
+}
 
 
 

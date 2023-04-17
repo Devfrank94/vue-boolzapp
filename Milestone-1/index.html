@@ -52,13 +52,31 @@
               <div>Attiva notifiche desktop</div>
             </div>
           </div>
-          
-
-
+          <!-- barra di ricerca -->
+          <div class="search-bar d-flex al-item-cent">
+            <!-- <div class="search-icon"> -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- </div> -->
+            <!-- <div class="search-input"> -->
+                <input type="text" placeholder="Cerca o Inizia una nuova chat">
+            <!-- </div> -->
+          </div>
         </div>
 
         <div class="list-contact">
-
+          <ul>
+            <li class="d-flex al-item-cent" v-for="contact in contacts">
+              <div class="user">
+                  <img :src="contact.avatar">
+              </div>
+              <div class="info-user">
+                <div>{{contact.name}}</div>
+                <div v-for="(lastMessage, index) in contact.messages" class="last-message">
+                  <div v-if="index === contact.messages.length -1">{{lastMessage.message}}</div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
 
       </div>
