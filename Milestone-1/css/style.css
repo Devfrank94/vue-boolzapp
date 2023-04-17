@@ -207,6 +207,10 @@ body{
   font-size: .8rem;
 }
 
+.main-chat{
+  padding: 20px 30px;
+}
+
 .inf-access{
   color: #B1B1B1;
 }
