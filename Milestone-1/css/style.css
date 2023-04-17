@@ -36,6 +36,18 @@ body{
   align-items: center;
 }
 
+.j-cont-start{
+  justify-content: flex-start;
+}
+
+.j-cont-end{
+  justify-content: flex-end;
+}
+
+.flex-dir-col{
+  flex-direction: column;
+}
+
 
 /* Stile Struttura */
 
@@ -188,7 +200,6 @@ body{
 
 
 
-
 /* Main */
 .main .info-user{
   margin-left: 10px;
@@ -198,6 +209,26 @@ body{
 
 .inf-access{
   color: #B1B1B1;
+}
+
+.main-chat p{
+  padding: 10px;
+  min-width: 10%;
+  max-width: 40%;
+  word-wrap: break-word;
+  font-size: .8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.mess-sent p {
+  background-color: #D5F9BA;
+  border-radius: 10px 0 10px 10px;
+}
+
+.mess-received p {
+  background-color: white;
+  border-radius: 10px 10px 10px 0;
 }
 
 .foot-chat i{
