@@ -66,16 +66,19 @@ body{
 
 .top-bar{
   height: 8%;
+  min-height: 68px;
   background-color: #EAEAEA;
 }
 
 .main-chat{
-  height: calc(100% - 16%);
+  height: calc(100% - 15%);
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
 }
 
 .foot-chat{
-  height: 8%;
+  height: 7%;
+  min-height: 60px;
   background-color: #F3EEEA;
 }
 
@@ -83,23 +86,50 @@ body{
 
 .aside img, .main img{
   border-radius: 50%;
-  width: 70px;
+  width: 40px;
   margin-left: 15px;
 }
 
 .icon-user i{
   color: #B1B1B1;
   margin-right: 20px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .top-bar .user span{
   margin-left: 8px;
 }
 
-.aside .name-user{
-  font-weight: 500;
-  font-size: 18px;
+.main .info-user{
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: .8rem;
 }
 
+.inf-access{
+  color: #B1B1B1;
+}
 
+.foot-chat i{
+  color: gray;
+  font-size: 1.3rem;
+}
+
+.foot-chat i:first-child{
+  margin-left: 15px;
+}
+
+.foot-chat i:last-child{
+  margin-right: 15px;
+}
+
+.foot-chat input {
+  padding: 10px 15px;
+  width: 75%;
+  border: none;
+  border-radius: 6px;
+  margin: 15px 10px;
+  color: black;
+  font-weight: 500;
+  font-size: .8rem;
+}
