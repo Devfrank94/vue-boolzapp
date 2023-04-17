@@ -84,6 +84,8 @@ body{
 
 /* /Stile Struttura */
 
+
+/* stile in comune */
 .aside img, .main img{
   border-radius: 50%;
   width: 40px;
@@ -99,7 +101,51 @@ body{
 .top-bar .user span{
   margin-left: 8px;
 }
+/* /stile in comune */
 
+/* aside */
+.banner-notify{
+  background-color: #8EDAFC;
+  min-height: 80px;
+}
+
+.banner-notify i{
+  font-size: 1.2rem;
+  margin-left: 10px;
+  padding: 13px;
+  background-color: white;
+  border-radius: 50%;
+  color: #8EDAFC;
+}
+
+.banner-notify .notify-info div{
+  font-size: .7rem;
+  margin: 3px 10px;
+}
+
+.banner-notify .notify-info div:first-child{
+  font-weight: 600;
+}
+
+.banner-notify .notify-info div:last-child{
+  font-weight: 500;
+  color: gray;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main */
 .main .info-user{
   margin-left: 10px;
   font-weight: 600;
