@@ -32,8 +32,12 @@ body{
   justify-content: space-between;
 }
 
+.al-item-cent{
+  align-items: center;
+}
 
 
+/* Stile Struttura */
 
 #app {
   display: flex;
@@ -45,15 +49,15 @@ body{
 }
 
 .container{
-  display: flex;
   width: 80%;
   height: 95%;
+  background-color: #D9DBD4;
 }
 
 .aside{
   width: 30%;
   background-color: white;
-  gap: 1px;
+  margin-right: 1px;
 }
 
 .main{
@@ -61,16 +65,41 @@ body{
 }
 
 .top-bar{
-  height: 9%;
+  height: 8%;
   background-color: #EAEAEA;
 }
 
 .main-chat{
-  height: calc(100% - 18%);
-  background-image: url();
+  height: calc(100% - 16%);
+  background-image: url(../img/mine.jpg);
 }
 
 .foot-chat{
-  height: 9%;
+  height: 8%;
   background-color: #F3EEEA;
 }
+
+/* /Stile Struttura */
+
+.aside img, .main img{
+  border-radius: 50%;
+  width: 70px;
+  margin-left: 15px;
+}
+
+.icon-user i{
+  color: #B1B1B1;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.top-bar .user span{
+  margin-left: 8px;
+}
+
+.aside .name-user{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+
