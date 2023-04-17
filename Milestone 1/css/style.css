@@ -8,6 +8,19 @@ body{
   font-family: 'Noto Sans', sans-serif;
 }
 
+/* utilities */
+
+.test{
+  background-color: red;
+}
+.test2{
+  background-color: green;
+}
+.test3{
+  background-color: orange;
+}
+
+
 #app {
   display: flex;
   justify-content: center;
@@ -15,4 +28,18 @@ body{
   height: 100vh;
   background: rgb(219,219,210);
   background: linear-gradient(0deg, #D9DBD4 85%, #009688 85%); 
+}
+
+.container{
+  display: flex;
+  width: 80%;
+  height: 95%;
+}
+
+.aside{
+  width: 30%;
+}
+
+.main{
+  flex-grow: 1;
 }
