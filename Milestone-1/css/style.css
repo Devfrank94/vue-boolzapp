@@ -20,6 +20,20 @@ body{
   background-color: orange;
 }
 
+.d-flex{
+  display: flex;
+}
+
+.j-cont-aro{
+  justify-content: space-around;
+}
+
+.j-cont-bet{
+  justify-content: space-between;
+}
+
+
+
 
 #app {
   display: flex;
@@ -38,8 +52,25 @@ body{
 
 .aside{
   width: 30%;
+  background-color: white;
+  gap: 1px;
 }
 
 .main{
   flex-grow: 1;
+}
+
+.top-bar{
+  height: 9%;
+  background-color: #EAEAEA;
+}
+
+.main-chat{
+  height: calc(100% - 18%);
+  background-image: url();
+}
+
+.foot-chat{
+  height: 9%;
+  background-color: #F3EEEA;
 }
