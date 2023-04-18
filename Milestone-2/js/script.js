@@ -17,6 +17,8 @@ return{
 },
 
 methods: {
+
+// Funzione stampa orario attuale
 printClock(){
     this.clock=dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE);
 },

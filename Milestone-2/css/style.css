@@ -182,6 +182,7 @@ body{
   border-bottom: 1px solid lightgray;
   cursor: pointer;
   padding: 15px 5px;
+  position: relative;
 }
 
 .aside ul .info-user{
@@ -205,7 +206,14 @@ body{
   background-color: lightgray;
 }
 
-
+.aside-clock{
+  font-size: .7rem;
+  font-weight: 600;
+  color: #B1B1B1;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
 
 
 /* Main */

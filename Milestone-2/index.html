@@ -65,14 +65,15 @@
           <ul>
             <li class="d-flex al-item-cent" v-for="(contact, i) in contacts" :class="{active : index == i}" @click="index = i">
               <div class="user">
-                  <img :src="contact.avatar">
+                <img :src="contact.avatar">
               </div>
               <div class="info-user">
                 <div>{{contact.name}}</div>
                 <div v-for="(lastMessage, index) in contact.messages" class="last-message">
-                <div v-if="index === contact.messages.length -1" class="last-message">{{lastMessage.message}}</div>
+                  <div v-if="index === contact.messages.length -1" class="last-message">{{lastMessage.message}}</div>
                 </div>
               </div>
+              <div class="aside-clock">{{clock}}</div>
             </li>
           </ul>
         </div>
