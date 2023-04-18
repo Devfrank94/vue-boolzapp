@@ -13,10 +13,5 @@ return{
     }
 },
 
-methods: {
-    
-
-}
-
 
 }).mount("#app")

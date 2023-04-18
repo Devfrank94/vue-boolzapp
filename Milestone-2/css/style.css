@@ -224,23 +224,53 @@ body{
 }
 
 .main-chat p{
-  padding: 10px;
-  min-width: 10%;
-  max-width: 40%;
+  padding: 10px 70px 15px 10px;
+  max-width: 300px;
   word-wrap: break-word;
   font-size: .8rem;
   font-weight: 500;
   margin-bottom: 10px;
+
 }
 
-.mess-sent p {
+.clearfix::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sent p {
   background-color: #D5F9BA;
   border-radius: 10px 0 10px 10px;
+  float: right;
 }
 
-.mess-received p {
+.received p {
   background-color: white;
   border-radius: 10px 10px 10px 0;
+  float: left;
+}
+
+/*TODO: apri ticket per posizionamento data in chat*/
+
+.info-chat{
+  position: relative;
+}
+
+.main-chat .info-chat h6{
+  font-size: .5rem;
+  position: absolute;
+  color: #B1B1B1;
+}
+
+.main-chat .info-chat .chat-date,.sent{
+  bottom: 12px;
+  right: 12px;
+}
+
+.main-chat .info-chat .chat-date,.received{
+  bottom: 12px;
+  left: 10px;
 }
 
 .foot-chat i{

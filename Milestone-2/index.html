@@ -95,19 +95,11 @@
           
         </div>
 
-        <div class="main-chat d-flex flex-dir-col">
-
-          <div class="mess-sent d-flex j-cont-end">
-            <p>Hai portato a spasso il cane?</p>
+        <div class="main-chat">
+          <div v-for="text in contacts[index].messages" :class="text.status" class="clearfix info-chat">
+            <p>{{text.message}}</p>
+            <h6 class="chat-date">{{text.date}}</h6>
           </div>
-          <div class="mess-sent d-flex j-cont-end">
-            <p>Hai portato a spasso il cane?</p>
-          </div>
-          <div class="mess-received d-flex j-cont-start">
-            <p>Tutto Fatto!</p>
-          </div>
-
-
         </div>
 
         <div class="foot-chat d-flex j-cont-aro al-item-cent">
