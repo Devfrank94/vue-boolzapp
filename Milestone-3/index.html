@@ -108,7 +108,7 @@
 
         <div class="foot-chat d-flex j-cont-aro al-item-cent">
           <i class="fa-regular fa-face-smile"></i>
-          <input type="text" placeholder="Scrivi un messaggio">
+          <input v-model="inpMessage" @keyup.enter="newMess" type="text" placeholder="Scrivi un messaggio">
           <i class="fa-solid fa-microphone"></i>
 
         </div>
