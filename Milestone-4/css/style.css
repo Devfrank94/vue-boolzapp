@@ -1,0 +1,304 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* utilities */
+
+.test{
+  background-color: red;
+}
+.test2{
+  background-color: green;
+}
+.test3{
+  background-color: orange;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.j-cont-aro{
+  justify-content: space-around;
+}
+
+.j-cont-bet{
+  justify-content: space-between;
+}
+
+.al-item-cent{
+  align-items: center;
+}
+
+.j-cont-start{
+  justify-content: flex-start;
+}
+
+.j-cont-end{
+  justify-content: flex-end;
+}
+
+.flex-dir-col{
+  flex-direction: column;
+}
+
+
+/* Stile Struttura */
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(219,219,210);
+  background: linear-gradient(0deg, #D9DBD4 85%, #009688 85%); 
+}
+
+.container{
+  width: 80%;
+  height: 95%;
+  background-color: #D9DBD4;
+}
+
+.aside{
+  width: 30%;
+  background-color: white;
+  margin-right: 1px;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+.top-bar{
+  height: 68px;
+  background-color: #EAEAEA;
+}
+
+.main-chat{
+  height: calc(100% - 128px);
+  background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
+}
+
+.foot-chat{
+  height: 60px;
+  background-color: #F3EEEA;
+}
+
+/* /Stile Struttura */
+
+
+/* stile in comune */
+.aside img, .main img{
+  border-radius: 50%;
+  width: 40px;
+  margin-left: 15px;
+}
+
+.icon-user i{
+  color: #B1B1B1;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+.top-bar .user span{
+  margin-left: 8px;
+}
+/* /stile in comune */
+
+/* aside */
+.banner-notify{
+  background-color: #8EDAFC;
+  min-height: 80px;
+}
+
+.banner-notify i{
+  font-size: 1.2rem;
+  margin-left: 10px;
+  padding: 13px;
+  background-color: white;
+  border-radius: 50%;
+  color: #8EDAFC;
+}
+
+.banner-notify .notify-info div{
+  font-size: .7rem;
+  margin: 3px 10px;
+}
+
+.banner-notify .notify-info div:first-child{
+  font-weight: 600;
+}
+
+.banner-notify .notify-info div:last-child{
+  font-weight: 500;
+  color: gray;
+  text-decoration: underline;
+}
+
+.utility-search .search-bar{
+  background-color: #F9F9F9;
+  height: 53px;
+}
+
+.utility-search .search-bar input{
+  padding: 11px 15px;
+  width: 100%;
+  border: none;
+  margin-right: 5px;
+  color: gray;
+  font-weight: 600;
+  font-size: .7rem;
+}
+
+.utility-search .search-bar i{
+  padding: 10px 15px;
+  margin-left: 5px;
+  margin-right: .5px;
+  background-color: white;
+  color: #B1B1B1;
+}
+
+.list-contact {
+  height: calc(100% - 201px);
+  overflow-y: scroll;
+}
+
+.list-contact li:hover {
+  background-color: lightgrey;
+  transition: all .5s;
+}
+
+.list-contact li {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+  padding: 15px 5px;
+  position: relative;
+}
+
+.aside ul .info-user{
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+.aside ul .info-user .last-message{
+  font-weight: 500;
+  font-size: .7rem;
+  color: grey;
+  white-space: nowrap;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aside .active{
+  transition: all .5s;
+  background-color: lightgray;
+}
+
+.aside-clock{
+  font-size: .7rem;
+  font-weight: 600;
+  color: #B1B1B1;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+
+/* Main */
+.main .info-user{
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: .8rem;
+}
+
+.main-chat{
+  padding: 20px 30px;
+}
+
+.inf-access{
+  color: #B1B1B1;
+}
+
+.main-chat p{
+  padding: 10px 70px 15px 10px;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-size: .8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+}
+
+.clearfix::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sent p {
+  background-color: #D5F9BA;
+  border-radius: 10px 0 10px 10px;
+  float: right;
+}
+
+.received p {
+  background-color: white;
+  border-radius: 10px 10px 10px 0;
+  float: left;
+}
+
+.info-chat{
+  position: relative;
+}
+
+.main-chat .info-chat h6{
+  font-size: .5rem;
+  position: absolute;
+  color: #B1B1B1;
+}
+
+.main-chat .info-chat h6.sent{
+  bottom: 12px;
+  right: 12px;
+}
+
+.main-chat .info-chat h6.received{
+  bottom: 12px;
+  left: 10px;
+}
+
+.foot-chat i{
+  color: gray;
+  font-size: 1.3rem;
+}
+
+.foot-chat i:first-child{
+  margin-left: 15px;
+}
+
+.foot-chat i:last-child{
+  margin-right: 15px;
+}
+
+.foot-chat input {
+  padding: 10px 15px;
+  width: 75%;
+  border: none;
+  border-radius: 6px;
+  margin: 15px 10px;
+  color: black;
+  font-weight: 500;
+  font-size: .8rem;
+}
