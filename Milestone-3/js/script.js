@@ -34,15 +34,29 @@ newMess(){
     }
     this.inpMessage= ''
     this.contacts[this.index].messages.push(newMess);
+    this.respMess();
+    },
+
+
+respMess(){
+    setTimeout(() => {
+    const message = {
+        date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+        message: 'Ok',
+        status: 'received'
     }
+    this.contacts[this.index].messages.push(message);
+    }, 1000);
+
+  },
 },
 
 
 mounted() {
     this.printClock()
-    
 
 },
+
 
 
 }).mount("#app")
