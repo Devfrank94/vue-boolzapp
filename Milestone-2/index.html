@@ -44,9 +44,8 @@
 
           <!-- notifiche -->
           <div class="banner-notify d-flex al-item-cent">
-            <!-- <div class="notify-icon"> -->
-                <i class="fa-solid fa-bell-slash"></i>
-            <!-- </div> -->
+            
+            <i class="fa-solid fa-bell-slash"></i>
             <div class="notify-info">
               <div>Ricevi notifiche di nuovi messaggi</div>
               <div>Attiva notifiche desktop</div>
@@ -54,12 +53,8 @@
           </div>
           <!-- barra di ricerca -->
           <div class="search-bar d-flex al-item-cent">
-            <!-- <div class="search-icon"> -->
-                <i class="fa-solid fa-magnifying-glass"></i>
-            <!-- </div> -->
-            <!-- <div class="search-input"> -->
-                <input type="text" placeholder="Cerca o Inizia una nuova chat">
-            <!-- </div> -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cerca o Inizia una nuova chat">
           </div>
         </div>
 
@@ -72,7 +67,7 @@
               <div class="info-user">
                 <div>{{contact.name}}</div>
                 <div v-for="(lastMessage, index) in contact.messages" class="last-message">
-                  <div v-if="index === contact.messages.length -1">{{lastMessage.message}}</div>
+                <div v-if="index === contact.messages.length -1" class="last-message">{{lastMessage.message}}</div>
                 </div>
               </div>
             </li>
