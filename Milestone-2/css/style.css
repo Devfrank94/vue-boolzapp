@@ -251,8 +251,6 @@ body{
   float: left;
 }
 
-/*TODO: apri ticket per posizionamento data in chat*/
-
 .info-chat{
   position: relative;
 }
@@ -263,12 +261,12 @@ body{
   color: #B1B1B1;
 }
 
-.main-chat .info-chat .chat-date,.sent{
+.main-chat .info-chat h6.sent{
   bottom: 12px;
   right: 12px;
 }
 
-.main-chat .info-chat .chat-date,.received{
+.main-chat .info-chat h6.received{
   bottom: 12px;
   left: 10px;
 }
