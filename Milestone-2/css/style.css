@@ -200,6 +200,11 @@ body{
   text-overflow: ellipsis;
 }
 
+.aside .active{
+  transition: all .5s;
+  background-color: lightgray;
+}
+
 
 
 

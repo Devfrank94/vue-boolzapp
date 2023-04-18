@@ -7,13 +7,16 @@ createApp({
 data(){
 return{
     contacts,
-
-
-
-
+    index: 0,
 
 
     }
+},
+
+methods: {
+    
+
 }
+
 
 }).mount("#app")

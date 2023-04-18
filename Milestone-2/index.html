@@ -60,7 +60,7 @@
 
         <div class="list-contact">
           <ul>
-            <li class="d-flex al-item-cent" v-for="contact in contacts">
+            <li class="d-flex al-item-cent" v-for="(contact, i) in contacts" :class="{active : index == i}" @click="index = i">
               <div class="user">
                   <img :src="contact.avatar">
               </div>
@@ -81,10 +81,10 @@
 
         <div class="top-bar d-flex j-cont-bet">
           <div class="user active d-flex al-item-cent">
-            <img src="img/avatar_1.jpg">
+            <img :src="contacts[index].avatar">
               <div class="info-user">
-                <div class="name-user">Michele</div>
-                <div class="inf-access">Ultimo accesso oggi alle 12:00</div>
+                <div class="name-user">{{contacts[index].name}}</div>
+                <div class="inf-access">Ultimo accesso {{contacts[index].messages[contacts[index].messages.length - 1].date}}</div>
               </div>
           </div>
           <div class="icon-user d-flex al-item-cent">
