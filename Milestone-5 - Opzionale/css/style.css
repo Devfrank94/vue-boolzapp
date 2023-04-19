@@ -235,8 +235,8 @@ body{
 }
 
 .main-chat p{
-  padding: 10px 70px 15px 10px;
-  max-width: 300px;
+  padding: 10px 20px 15px 10px;
+  width: 200px;
   word-wrap: break-word;
   font-size: .8rem;
   font-weight: 500;
@@ -264,6 +264,7 @@ body{
 
 .info-chat{
   position: relative;
+  cursor: pointer;
 }
 
 .main-chat .info-chat h6{
@@ -282,6 +283,60 @@ body{
   left: 10px;
 }
 
+.dropdown .fa-chevron-down{
+  position: absolute;
+  font-size: .7rem;
+  opacity: 0;
+  padding: 1px;
+}
+
+.info-chat .dropdown i.sent{
+  top: 7px;
+  right: 12px;
+}
+
+.info-chat .dropdown i.received{
+  top: 7px;
+  left: 177px;
+}
+
+.main-chat .info-chat .dropdown .fa-chevron-down:hover{
+  opacity: 1;
+}
+
+.dropdown-menu li{
+  list-style: none;
+  font-size: .7rem;
+  padding: 10px 15px;
+}
+
+.dropdown-menu li:hover{
+  background-color: #dfdfdf;
+}
+
+.dropdown-menu{
+  position: absolute;
+  background-color: white;
+  z-index: 5;
+  opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu.sent{
+  opacity: 1;
+  top: 18px;
+  right: 0px;
+}
+
+.dropdown:hover .dropdown-menu.received{
+  opacity: 1;
+  top: 18px;
+  left: 100px;
+}
+
+
+
+
+/* Barra scrittura messaggio */
 .foot-chat i{
   color: gray;
   font-size: 1.3rem;

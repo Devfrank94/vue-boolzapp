@@ -103,6 +103,13 @@
 
         <div class="main-chat">
           <div v-for="text in contacts[index].messages" :class="text.status" class="clearfix info-chat">
+            <div class="dropdown">
+              <i class="fa-solid fa-chevron-down" :class="text.status"></i>
+              <ul class="dropdown-menu" :class="text.status">
+                <li><i class="fa-solid fa-trash-can"></i>  Elimina Messaggio</li>
+                <li><i class="fa-solid fa-circle-info"></i>  Info Messaggio</li>
+              </ul>
+            </div>
             <p>{{text.message}}</p>
             <h6 class="chat-date" :class="text.status">{{text.date}}</h6>
           </div>
