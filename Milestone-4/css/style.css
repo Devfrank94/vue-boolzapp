@@ -176,13 +176,16 @@ body{
   transition: all .5s;
 }
 
-.list-contact li {
-  list-style: none;
-  display: flex;
+.contain-contact{
   border-bottom: 1px solid lightgray;
   cursor: pointer;
   padding: 15px 5px;
   position: relative;
+
+}
+
+.list-contact li {
+  list-style: none;
 }
 
 .aside ul .info-user{

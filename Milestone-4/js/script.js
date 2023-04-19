@@ -53,7 +53,7 @@ respMess(){
 
 search(){
     this.contacts.forEach(contact => {
-    contact.visible = contact.name.includes(this.nameFilter.toLowerCase())
+    contact.visible = contact.name.toLowerCase().includes(this.nameFilter.toLowerCase())
     console.log(this.nameFilter)
     })
 },
