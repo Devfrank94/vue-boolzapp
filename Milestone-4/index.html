@@ -57,7 +57,7 @@
           <!-- barra di ricerca -->
           <div class="search-bar d-flex al-item-cent">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Cerca o Inizia una nuova chat">
+            <input @keyup="search" v-model="nameFilter" type="text" placeholder="Cerca o Inizia una nuova chat">
           </div>
         </div>
 

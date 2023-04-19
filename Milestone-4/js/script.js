@@ -12,7 +12,8 @@ return{
     contacts,
     index: 0,
     clock: '',
-    inpMessage: ''
+    inpMessage: '',
+    nameFilter: ''
 
     }
 },
@@ -48,13 +49,20 @@ respMess(){
     this.contacts[this.index].messages.push(message);
     }, 1000);
 
-  },
+},
+
+search(){
+    this.contacts.forEach(contact => {
+    contact.visible = contact.name.includes(this.nameFilter.toLowerCase())
+    console.log(this.nameFilter)
+    })
+},
+
 },
 
 
 mounted() {
     this.printClock()
-
 },
 
 
