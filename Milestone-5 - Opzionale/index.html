@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- LUXON  -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js' integrity='sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==' crossorigin='anonymous'></script>
+
+    <!-- CDN VueJs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- stile -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Boolzapp</title>
+</head>
+<body>
+  
+  <div id="app">
+    
+    <div class="container d-flex">
+
+      <!-- sezione aside (sinistra) -->
+      <div class="aside">
+        <div class="top-bar d-flex j-cont-bet">
+          <div class="user d-flex al-item-cent">
+            <img src="img/avatar_io.jpg">
+            <span class="name-user">Sofia</span>
+          </div>
+          <div class="icon-user d-flex al-item-cent">
+            <i class="fa-sharp fa-solid fa-circle-notch"></i>
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+
+        </div>
+
+        <div class="utility-search">
+
+          <!-- notifiche -->
+          <div class="banner-notify d-flex al-item-cent">
+            
+            <i class="fa-solid fa-bell-slash"></i>
+            <div class="notify-info">
+              <div>Ricevi notifiche di nuovi messaggi</div>
+              <div>Attiva notifiche desktop</div>
+            </div>
+          </div>
+          <!-- barra di ricerca -->
+          <div class="search-bar d-flex al-item-cent">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input @keyup="search" v-model="nameFilter" type="text" placeholder="Cerca o Inizia una nuova chat">
+          </div>
+        </div>
+
+        <div class="list-contact">
+          <ul>
+            <li v-for="(contact, i) in contacts" :class="{active : index == i}" @click="index = i">
+             <div class="contain-contact d-flex al-item-cent" v-if="contact.visible">
+                <div class="user">
+                  <img :src="contact.avatar">
+                </div>
+                <div class="info-user">
+                  <div>{{contact.name}}</div>
+                  <div v-for="(lastMessage, index) in contact.messages" class="last-message">
+                    <div v-if="index === contact.messages.length -1" class="last-message">{{lastMessage.message}}</div>
+                  </div>
+                </div>
+                <div class="aside-clock">{{clock}}</div>
+            </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- sezione main (destra) -->
+      <div class="main">
+
+        <div class="top-bar d-flex j-cont-bet">
+          <div class="user active d-flex al-item-cent">
+            <img :src="contacts[index].avatar">
+              <div class="info-user">
+                <div class="name-user">{{contacts[index].name}}</div>
+                <div class="inf-access">Ultimo accesso {{contacts[index].messages[contacts[index].messages.length - 1].date}}</div>
+              </div>
+          </div>
+          <div class="icon-user d-flex al-item-cent">
+            <i class="fa-sharp fa-solid fa-search"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+          
+        </div>
+
+        <div class="main-chat">
+          <div v-for="text in contacts[index].messages" :class="text.status" class="clearfix info-chat">
+            <p>{{text.message}}</p>
+            <h6 class="chat-date" :class="text.status">{{text.date}}</h6>
+          </div>
+        </div>
+
+        <div class="foot-chat d-flex j-cont-aro al-item-cent">
+          <i class="fa-regular fa-face-smile"></i>
+          <input v-model="inpMessage" @keyup.enter="newMess" type="text" placeholder="Scrivi un messaggio">
+          <i class="fa-solid fa-microphone"></i>
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+  
+  </div>
+  
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
