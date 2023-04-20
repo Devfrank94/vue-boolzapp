@@ -14,9 +14,8 @@ return{
     clock: '',
     inpMessage: '',
     nameFilter: '',
-    chevShow: false
-    
-
+    chevShow: false,
+    messIndex: 0
     }
 },
 
