@@ -108,7 +108,7 @@
               <div class="dropdown" >
                 <i class="fa-solid fa-chevron-down" :class="text.status" @click.stop="chevShow = !chevShow, messIndex = i"></i>
                 <ul class="dropdown-menu" :class="text.status" v-show="chevShow" v-if="messIndex === i">
-                  <li><i class="fa-solid fa-trash-can"></i>  Elimina Messaggio</li>
+                  <li @click="remMess(i)"><i class="fa-solid fa-trash-can"></i>  Elimina Messaggio</li>
                   <li><i class="fa-solid fa-circle-info"></i>  Info Messaggio</li>
                 </ul>
               </div>

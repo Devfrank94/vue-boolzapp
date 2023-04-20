@@ -323,13 +323,13 @@ body{
 
 .dropdown .dropdown-menu.sent{
   opacity: 1;
-  top: 18px;
+  top: 19px;
   right: 0px;
 }
 
 .dropdown .dropdown-menu.received{
   opacity: 1;
-  top: 18px;
+  top: 19px;
   left: 100px;
 }
 

@@ -59,10 +59,9 @@ search(){
     })
 },
 
-chevron(){
-   console.log('hai cliccato la chevron')
-
-}
+remMess(i){
+  this.contacts[this.index].messages.splice(i,1);
+},
 
 },
 
