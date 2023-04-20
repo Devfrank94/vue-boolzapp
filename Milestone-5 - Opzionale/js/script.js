@@ -13,7 +13,9 @@ return{
     index: 0,
     clock: '',
     inpMessage: '',
-    nameFilter: ''
+    nameFilter: '',
+    chevShow: false
+    
 
     }
 },
@@ -57,6 +59,11 @@ search(){
     console.log(this.nameFilter)
     })
 },
+
+chevron(){
+   console.log('hai cliccato la chevron')
+
+}
 
 },
 
